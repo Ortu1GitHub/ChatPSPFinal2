@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Chat-PSP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ChatPSP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ChatPspCompleto" vcs="Git" />
   </component>
 </project>

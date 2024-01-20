@@ -57,10 +57,16 @@ class MarcoServidor extends JFrame implements Runnable {
                 IP = datosRecibidos.getIP();
                 mensaje = datosRecibidos.getMensaje();
 
-                // Codigo para detectar clientes ONLINE y almacenarlas sus usuarios e ips...
-                if (datosRecibidos.getMensaje().equals("ONLINE")) {
+                // Codigo para detectar clientes ONLINE/OFFLINE y almacenar o borrar sus usuarios e ips...
+                if (datosRecibidos.getMensaje().equals("ONLINE") || datosRecibidos.getMensaje().equals("OFFLINE")) {
+                    if (datosRecibidos.getMensaje().equals("ONLINE")) {
+                        listaIPS.put(nick, IP);
+                    }
+                    if (datosRecibidos.getMensaje().equals("OFFLINE")) {
+                        listaIPS.remove(nick, IP);
+                    }
                     taTexto.append("\n" + nick + " " + mensaje + " con IP " + IP + "...");
-                    listaIPS.put(nick, IP);
+
                     datosRecibidos.setListaIPS(listaIPS);
 
                     //Se envia la lista de IPs a todos los clientes...

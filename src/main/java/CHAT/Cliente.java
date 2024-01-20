@@ -111,7 +111,7 @@ class LaminaMarcoCliente extends JPanel implements ActionListener, Runnable {
                 ObjectInputStream flujoEntrada = new ObjectInputStream(socketClienteRecibe.getInputStream());
                 paqueteRecibido = (PaqueteEnvio) flujoEntrada.readObject();
 
-                if (paqueteRecibido.getMensaje().equals("ONLINE")) {
+                if (paqueteRecibido.getMensaje().equals("ONLINE")||paqueteRecibido.getMensaje().equals("OFFLINE")) {
                     //Se carga la lista de IPs online en el combobox por usuario
                     lisaIPsMenu = paqueteRecibido.getListaIPS();
                     //Se borra el contenido del combobox antes de recargarlo para evitar duplicidades
