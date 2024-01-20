@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ChatPSP:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ChatPSP_jar</output-path>
+    <root id="archive" name="ChatPSP.jar">
+      <element id="module-output" name="ChatPSP" />
+    </root>
+  </artifact>
+</component>
